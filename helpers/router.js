@@ -25,7 +25,7 @@ const router = () => {
     })
     return data
   }, {})
-  return async (ctx, next) => {
+  return (ctx, next) => {
     let endpoint
     for (let e of index[ctx.method]) {
       let r = e.pathmatch(ctx.request.path)
@@ -39,23 +39,19 @@ const router = () => {
       return ctx.throw(404, 'not found')
     }
     
-    let errors = []
     if (endpoint.input) {
-      try {
-        for (let [k, input] of Object.entries(endpoint.input)) {
-          let [_input, _errors] = await Validate(input, ctx.request[k])
-          if (_errors.length) {
-            errors = [...errors, ..._errors]
-          }
-          ctx.state[k] = _input
+      let errors = []
+      for (let [k, input] of Object.entries(endpoint.input)) {
+        let [_input, _errors] = Validate(input, ctx.request[k])
+        if (_errors.length) {
+          errors = [...errors, ..._errors]
         }
-        if (errors.length) {
-          ctx.status = 422
-          ctx.body = { errors }
-          return
-        }
-      } catch (e) {
-        throw e
+        ctx.state[k] = _input
+      }
+      if (errors.length) {
+        ctx.status = 422
+        ctx.body = { errors }
+        return
       }
     }
     

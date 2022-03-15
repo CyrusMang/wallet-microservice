@@ -8,7 +8,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "c-validator": "^5.2.1",
+    "c-validator": "^5.2.2",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "moment": "^2.22.2",

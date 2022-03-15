@@ -111,10 +111,12 @@ bytes@3.1.2:
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.2.tgz#8b0beeb98605adf1b128fa4386403c009e0221a5"
   integrity sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==
 
-c-validator@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/c-validator/-/c-validator-5.2.1.tgz#c8c987b02b049ac3802edfb4cd044014faf6f3fd"
-  integrity sha512-5qS2LcuOofb+/jZaF9a7rdLaoQzbBY8/kXg/VS72oyQT2QQT9q3mVeASy/e3TGreI4ZJKiWFdJdMnctRI8Pm4w==
+c-validator@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/c-validator/-/c-validator-5.2.2.tgz#3290bd42175d4eb380c53fd778d65b6f4fdbeed6"
+  integrity sha512-hWHEpOoE96YC8IysAr3eulwnGiKzO2EzOrWGLBbOEAzPp/LbEiMm7LRMC2RuUAaEhYeJgmTsQRbx/yVf8ScE3w==
+  dependencies:
+    moment "^2.29.1"
 
 cache-content-type@^1.0.0:
   version "1.0.1"
@@ -786,7 +788,7 @@ minimist@^1.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
-moment@^2.22.2:
+moment@^2.22.2, moment@^2.29.1:
   version "2.29.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
